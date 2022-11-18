@@ -97,7 +97,15 @@ func main() {
 					ip = *instance.PublicIpAddress
 				}
 
-				fmt.Printf("%-20s %-20s %10s %15s\n", id, name, state, ip)
+				instanceManaged := false
+				for _, i := range instances {
+					if id == *i {
+						instanceManaged = true
+					}
+				}
+				if instanceManaged {
+					fmt.Printf("%-20s %-20s %10s %15s\n", id, name, state, ip)
+				}
 			}
 		}
 	}
