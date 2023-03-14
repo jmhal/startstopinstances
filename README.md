@@ -1,6 +1,6 @@
 # startstopinstances
 
-A small tool for wake up my development instances and stop them.
+A small tool for wake up my development instances and stop them. Works on Linux.
 
 ```bash
 $ ./startstopinstances (start|stop|status)
